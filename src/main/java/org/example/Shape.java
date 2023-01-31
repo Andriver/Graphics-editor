@@ -2,6 +2,12 @@ package org.example;
 
 public class Shape implements Drawable {
 
+    public String name = "Shape";
+
+    public String getName() {
+        return name;
+    }
+
     private double x;
     private double y;
 
@@ -13,13 +19,15 @@ public class Shape implements Drawable {
         this.y = y;
     }
 
-    @Override
     public double getX() {
         return x;
     }
 
-    @Override
     public double getY() {
         return y;
+    }
+
+    void common() {
+        System.out.println(name);
     }
 }
